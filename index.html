@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship</title>
+    <!-- Link to Font Awesome and Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <!-- Link to your custom stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Place this before your script.js include -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <img id="logo" src="./Preview_Edited-removebg.png" alt="logo"/>
+        </div>
+        <div id="undoRedo">
+            <button id="undoBtn" title="Undo" aria-label="Undo">
+                <i class="fas fa-undo"></i>
+                <span>Undo</span>
+            </button>
+            <button id="redoBtn" title="Redo" aria-label="Redo">
+                <i class="fas fa-redo"></i>
+                <span>Redo</span>
+            </button>
+        </div>
+        <div>
+
+        </div>
+    </div>
+    
+    <div id="body">
+        <div id="content">
+            <div id="rectangle">
+                <!-- text will be inserted here -->
+            </div>
+            <!-- functions block -->
+            <div id="function">
+                <div id="firstfunc">
+                    <!-- font style -->
+                    <div>
+                        <select id="fontStyle" title="Font Style">
+                            <option value="Arial">Arial</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Courier New">Courier New</option>
+                        </select>
+                    </div>
+                    <!-- font size -->
+                    <div class="font-size-control">
+                        <button id="decreaseSize" title="Decrease Font Size">
+                            <i class="bi bi-dash-lg"></i>
+                        </button>
+                        <input type="number" id="fontSize" min="10" max="72" value="16" title="Font Size" readonly>
+                        <button id="increaseSize" title="Increase Font Size">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                    <!-- font edit -->
+                    <div id="fontEdit">
+                        <button id="boldBtn" title="Bold">
+                            <i class="bi bi-type-bold"></i>
+                        </button>
+                        <button id="italicBtn" title="Italic">
+                            <i class="bi bi-type-italic"></i>
+                        </button>
+                        <button id="paraBtn" title="Paragraph">
+                            <i class="bi bi-text-center"></i>
+                        </button>
+                        <button id="underlineBtn" title="Underline">
+                            <i class="bi bi-type-underline"></i>
+                        </button>
+                    </div>
+                    <!-- Background image -->
+                    <div id="bgImage">
+                        <input type="file" class="hide" accept="image/*" title="none" id="bgImageInput">
+                        <button id="bgImageBtn" title="Add Background Image">
+                            <i class="bi bi-image"></i>
+                            Background Image
+                        </button>
+                    </div>
+                    <!-- Change text color of selected text -->
+                    <div id="textColor">
+                        <input type="color" class="hide" title="none" id="colorPicker">
+                        <button id="textColorBtn" title="Change Text Color">
+                            <i class="bi bi-palette"></i>
+                            Text Color
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- add text -->
+            <div id="addText">
+                
+                <div id="addDeleteBtn">
+                    <textarea id="inputText" placeholder="Enter text here"></textarea>
+                    <button id="insertTextBtn">
+                        <i class="bi bi-fonts"></i>
+                        Add text
+                    </button>
+                    <!-- text delete -->
+                    <button id="delText" title="Delete text">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Download button in HD PNG -->
+            <div id="download">
+                <button id="downloadPngBtn" title="Download as HD PNG">
+                    <i class="bi bi-cloud-download"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
